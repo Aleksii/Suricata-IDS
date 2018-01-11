@@ -29,6 +29,6 @@ RUN git clone https://github.com/Aleksii/Suricata-IDS.git && cd Suricata-IDS && 
 
 COPY ./start.sh /root/start.sh
 
-CMD ["chmod", "777", "/root/start.sh"]
+RUN ["chmod", "777", "/root/start.sh"]
 
-CMD ["/root/start.sh"]
+ENTRYPOINT ["/root/start.sh"]
