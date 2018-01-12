@@ -6,7 +6,7 @@ RUN  apt-get install libpcre3-dbg libpcre3-dev autoconf automake libtool libpcap
 
 RUN  apt-get install libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev -y
 
-RUN wget https://www.openinfosecfoundation.org/download/suricata-3.1.2.tar.gz && tar -xvf suricata-3.1.2.tar.gz && cd suricata-3.1.2 &&  ./configure --enable-nfqueue --prefix=/usr --s$
+RUN wget https://www.openinfosecfoundation.org/download/suricata-3.1.2.tar.gz && tar -xvf suricata-3.1.2.tar.gz && cd suricata-3.1.2 &&  ./configure --enable-nfqueue --prefix=/usr --sysconfdir=/etc --localstatedir=/var
 
 RUN apt install net-tools  ethtool -y
 
